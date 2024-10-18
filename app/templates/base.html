@@ -9,11 +9,11 @@
         <nav id="header-nav">
             <div id="header-nav-logo">
                 <a href="{{url_for('home.landing_page')}}">
-                    <img src="{{url_for('static', filename='imgs/logo-csud.svg')}}" alt="logo-csud"/>
+                    <img src="{{url_for('static', filename='imgs/logo.png')}}" alt="logo-unitearts"/>
                 </a>
             </div>
             <ul id="header-nav-menu">
-                <li><a href="create/createproject.html">Créer un projet</a></li>
+                    <li><a href="{{ url_for('auth.create') }}">Créer un projet</a></li>
                 {% if g.user %}
                     <li><span>{{ g.user['username'] }}</span>
                     <li><a href="{{ url_for('auth.logout') }}">Se déconnecter</a>
@@ -24,6 +24,7 @@
                 {% endif %}
             </ul>
         </nav>
+        <hr class="line">
     </header>
         
     <main id="main-content">
@@ -31,15 +32,16 @@
     </main>
 
     <footer id="footer">
+        <hr class="line2">
         <div id="footer-nav">
             <div>
                 <p>Template de base TM</p>
             </div>
             <div>
-                <p>Collège du Sud, 1630, Bulle </p>
+                <p>UniteArts</p>
             </div>
             <div>
-                <p>Johan Jobin</p>
+                <p>Simon Buenaventura</p>
             </div>
         </div>
     </footer>
