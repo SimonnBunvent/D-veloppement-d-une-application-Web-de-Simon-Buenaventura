@@ -63,6 +63,11 @@
   justify-content: center; 
 }
 
+.center{
+  display: flex;
+  justify-content: center; 
+}
+
 h1 {
   display: flex;
   margin: 5% auto auto auto;
@@ -156,12 +161,31 @@ header{
 
 input[type=button], input[type=submit]{
   background-color: #FED33B;
-  border: none;
   color: black;
+  border: none;
   padding: 5px 140px;
   margin: 50px 2px 4px 2px;
   border-radius: 10px;
   cursor: pointer;
+}
+
+input[type=button]{
+  background-image: linear-gradient(to right, #FF1058 , #CE1A1A);
+  color: white;
+  border: none;
+  padding: 20% 50%;
+  margin: auto;
+  margin-bottom: 150%;
+  border-radius: 70%;
+  transition: .2s;
+}
+
+input[type=button]:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  z-index: 2;
 }
 
 input[type=text], input[type=password], input[type=email]{
@@ -171,10 +195,17 @@ input[type=text], input[type=password], input[type=email]{
   padding: 5px 150px 5px 10px;
   margin: 10px 2px 4px 2px;
   border-radius: 10px;
+
 }
 
 a[href=emailcode]{
-  color: rgba(0, 0, 0, .6);
+  color: rgb(85, 85, 85);
+  text-decoration: none;
+}
+
+a[href=emailcode]:hover{
+  color: rgb(85, 85, 85);
+  text-decoration: underline;
 }
 
 .content-index, .content-404, .content-register, .content-profile{
@@ -192,6 +223,10 @@ a[href=emailcode]{
   margin: auto;
 }
   
+.block:empty {
+  opacity: 0;
+}
+
 .content-index h1{
     text-align: center;
 }
