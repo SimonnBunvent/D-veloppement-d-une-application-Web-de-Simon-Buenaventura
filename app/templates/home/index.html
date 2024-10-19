@@ -8,6 +8,9 @@
   <div class="content-index">
     {% if g.user %}
       <h1>Vous êtes connectés</h1>
+      <div id="Blogo">
+        <img src="{{url_for('static', filename='imgs/logo_big.png')}}" alt="logo_homepg"></img>
+      </div>
     {% else %}
       <div id="Blogo">
         <img src="{{url_for('static', filename='imgs/logo_big.png')}}" alt="logo_homepg"></img>
