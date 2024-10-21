@@ -136,13 +136,13 @@ header{
 }
 
 #header-nav li a:hover{
-    font-weight: bold;
     color: #EF1344;
 }
 
 #header-nav a{
     color: hsla(0, 0%, 100%, 0.75);
     text-decoration: none;
+    font-weight: bold;
 }
 
 #footer-nav {
@@ -177,13 +177,14 @@ input[type=button]{
   margin: auto;
   margin-bottom: 150%;
   border-radius: 70%;
-  transition: .2s;
+  transition: .5s;
+  font-weight: bold;
 }
 
 input[type=button]:hover{
-  transform: scale(1.1);
+  background-image: linear-gradient(to right, white, white);
+  color: #EF1344;
   cursor: pointer;
-  font-weight: bold;
   position: relative;
   z-index: 2;
 }
