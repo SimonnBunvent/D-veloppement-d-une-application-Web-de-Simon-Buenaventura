@@ -57,6 +57,11 @@
   font-weight: 500;
 }
 
+@keyframes logo_animate {
+  0%   {right:100%; top:60%;transform: rotate(-20deg);}
+  100% {right: 5%; top: 20%;transform: rotate(0deg);}
+}
+
 .column{
   display: flex;
   flex-direction: column; 
@@ -147,6 +152,7 @@ header{
 #header-nav-img img{
     width: 100%;
     margin-top: 20px;
+    transform: rotate(360deg);
 }
 
 #header-nav-menu{
@@ -278,6 +284,8 @@ a[href=emailcode]:hover{
   width: 100%;
   right: 5%;
   top: 20%;
+  animation-name: logo_animate;
+  animation-duration: 1.5s;
 }
 
 .hmpg {
