@@ -7,7 +7,7 @@
 {% block content%}
   <div class="content-index">
     {% if g.user %}
-      <h1>Vous êtes connectés</h1>
+      <h1>Bienvenue, "<span>{{ g.user['username'] }}</span>"</h1>
       <div id="Blogo">
         <img src="{{url_for('static', filename='imgs/logo_big.png')}}" alt="logo_homepg"></img>
       </div>
@@ -23,9 +23,9 @@
     </a>
   </div>
   <div class="hmpg">
-    <h3>Bienvenue au site UniteArts</h3>
-    <li>      </li>
-    <li>fawjoopaijfa</li>
-    
+    <h4>Bienvenue au site UniteArts
+      <li></li>
+      <li>fawjoopaijfa</li>
+    </h4>
   </div>  
 {% endblock %}

@@ -7,7 +7,7 @@
 <body>
     <header id="header">
         <nav id="header-nav">
-            <div id="header-nav-logo">
+            <div id="header-nav-img">
                 <a href="{{url_for('home.landing_page')}}">
                     <img src="{{url_for('static', filename='imgs/logo.png')}}" alt="logo-unitearts"/>
                 </a>
@@ -15,14 +15,24 @@
             <ul id="header-nav-menu">
                     <li><a href="{{ url_for('auth.create') }}">Créer un projet</a></li>
                 {% if g.user %}
-                    <li><span>{{ g.user['username'] }}</span>
                     <li><a href="{{ url_for('auth.logout') }}">Se déconnecter</a>
-                    <li><a href="{{ url_for('user.show_profile') }}">Consulter son profil</a></li>
+                    <li><span>{{ g.user['username'] }}</span>
                 {% else %}
                     <li><a href="{{ url_for('auth.register') }}">S'enregistrer</a>
                     <li><a href="{{ url_for('auth.login') }}">Se connecter</a>
                 {% endif %}
             </ul>
+            <div id="header-nav-img" class="profile-pic">
+                {%if g.user['profile_pic'] is none%}
+                    <a href="{{url_for('user.show_profile')}}">
+                        <img class="round" src="/static/imgs/profile-pic.webp" alt="default profile pic">
+                    </a>
+                {% else %}
+                    <a href="{{url_for('user.show_profile')}}">
+                        <span  >{{g.user['profile_pic']}}</span>
+                    </a>
+                {% endif %}
+            </div>
         </nav>
         <hr class="line">
     </header>
