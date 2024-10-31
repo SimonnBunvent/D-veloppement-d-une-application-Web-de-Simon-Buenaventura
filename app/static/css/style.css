@@ -23,7 +23,9 @@
     font-family: "Lexend Deca", sans-serif;
     color: white;
     background-image: linear-gradient(to right, #0C124C , black);
-
+    min-height: 1300px;
+    display: flex;
+    flex-direction: column;
   }
 
   /* 5. Improve media defaults */
@@ -172,6 +174,10 @@ header{
 #header-nav a{
     color: hsla(0, 0%, 100%, 0.75);
     text-decoration: none;
+}
+
+footer{
+  margin-top: auto;
 }
 
 #footer-nav {

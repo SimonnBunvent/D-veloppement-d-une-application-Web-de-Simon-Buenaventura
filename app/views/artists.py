@@ -1,7 +1,8 @@
 from flask import (Blueprint, flash, g, redirect, render_template, request, session, url_for)
 
-create_bp = Blueprint('artists', __name__)
+artists_bp = Blueprint('artists', __name__, url_prefix='/artists')
 
-
-def artists():
+@artists_bp.route('/ppl')
+def artist():
+    # Se déconnecter consiste simplement à supprimer le cookie session
     return render_template('artists/ppl.html')
