@@ -16,15 +16,17 @@
                 </a>
             </div>
             <ul id="header-nav-menu">
-                    <li><a href="{{ url_for('auth.create') }}">Créer un projet</a></li>
+                    <li><a href="{{ url_for('auth.artists') }}">artistes</a></li>
+                    <li><a href="{{ url_for('auth.gallery') }}">oeuvres</a></li>
+                    <li><a href="{{ url_for('auth.create') }}">créer un projet</a></li>
                 {% if g.user %}
-                    <li><a href="{{ url_for('auth.logout') }}">Se déconnecter</a>
-                    <li><span>{{ g.user['username'] }}</span>
+                    <li><a href="{{ url_for('auth.logout') }}">se déconnecter</a>
                 {% else %}
-                    <li><a href="{{ url_for('auth.register') }}">S'enregistrer</a>
-                    <li><a href="{{ url_for('auth.login') }}">Se connecter</a>
+                    <li><a href="{{ url_for('auth.register') }}">s'enregistrer</a>
+                    <li><a href="{{ url_for('auth.login') }}">se connecter</a>
                 {% endif %}
             </ul>
+            
             <div id="header-nav-img" class="profile-pic">
                 {%if g.user['profile_pic'] is none%}
                     <a href="{{url_for('user.show_profile')}}">
@@ -37,7 +39,7 @@
                 {% endif %}
             </div>
         </nav>
-        <hr class="line">
+            <hr class="line">
     </header>
         
     <main id="main-content">

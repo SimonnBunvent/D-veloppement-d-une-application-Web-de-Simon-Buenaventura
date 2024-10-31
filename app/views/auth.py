@@ -103,6 +103,16 @@ def logout():
     # On redirige l'utilisateur vers la page principale une fois qu'il s'est déconnecté
     return redirect("/")
 
+@auth_bp.route('/ppl')
+def artists():
+    # Se déconnecter consiste simplement à supprimer le cookie session
+    return render_template('artists/ppl.html')
+
+@auth_bp.route('/artworks')
+def gallery():
+    # Se déconnecter consiste simplement à supprimer le cookie session
+    return render_template('gallery/artworks.html')
+
 @auth_bp.route('/createproject')
 def create():
     # Se déconnecter consiste simplement à supprimer le cookie session
