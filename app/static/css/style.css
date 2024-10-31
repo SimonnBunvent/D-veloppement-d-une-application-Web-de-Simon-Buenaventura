@@ -20,7 +20,7 @@
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-size: 16px;
-    font-family: 'LexendDeca', sans-serif; 
+    font-family: "Lexend Deca", sans-serif;
     color: white;
     background-image: linear-gradient(to right, #0C124C , black);
 
@@ -50,12 +50,7 @@
   /*
 -----------------   ADD YOUR CSS RULES BELOW ------------------
 */
-@font-face {
-  font-family: 'LexendDeca';
-  src: url('/Lexend_Deca/LexendDeca-VariableFont_wght.ttf');
-  font-variant: small-caps;
-  font-weight: 500;
-}
+
 
 @keyframes logo_animate {
   0%   {right:100%; top:60%;transform: rotate(-20deg);}
@@ -101,7 +96,6 @@ h1 {
 
 h2 {
   font-size: 60px;
-  font-weight: bold;
   font-family: 'LexendDeca', sans-serif;
 }
 
@@ -176,7 +170,6 @@ header{
 #header-nav a{
     color: hsla(0, 0%, 100%, 0.75);
     text-decoration: none;
-    font-weight: bold;
 }
 
 #footer-nav {
@@ -191,6 +184,7 @@ header{
 
 #footer-nav p{
     color: #EF1344;
+    transition: 1.5s;
 }
 
 input[type=button], input[type=submit]{
@@ -212,7 +206,6 @@ input[type=button]{
   margin-bottom: 150%;
   border-radius: 70%;
   transition: .5s;
-  font-weight: bold;
 }
 
 input[type=button]:hover{
