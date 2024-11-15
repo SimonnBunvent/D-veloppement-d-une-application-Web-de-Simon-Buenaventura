@@ -21,7 +21,6 @@
                     <li><a href="{{ url_for('auth.create') }}">créer un projet</a></li>
                 {% if g.user %}
                     <li><a href="{{ url_for('auth.create') }}">projets en progrès</a></li>
-                    <li><a href="{{ url_for('auth.logout') }}">se déconnecter</a>
                 {% else %}
                     <li><a href="{{ url_for('auth.register') }}">s'enregistrer</a>
                     <li><a href="{{ url_for('auth.login') }}">se connecter</a>
